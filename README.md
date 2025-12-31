@@ -39,11 +39,10 @@ cd SpotTransfer
     ```bash
     pip install -r requirements.txt
     ```
-3. Create an `.env` file and add your Spotify credentials (get these from the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/)):
+3. Rename `.env.example` to `.env` and add your Spotify credentials (get these from the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/)):
     ```env
     SPOTIPY_CLIENT_ID=<your_spotify_client_id>
     SPOTIPY_CLIENT_SECRET=<your_spotify_client_secret>
-    FRONTEND_URL=http://localhost:5173
     ```
 4. Start the Flask server:
     ```bash
@@ -53,7 +52,7 @@ cd SpotTransfer
 
 ### Frontend Setup
 
-1. In the `frontend` directory, create an `.env` file with the following content:
+1. In the `frontend` directory, rename `.env.example` to `.env` and make any changes to the variable if required:
     ```env
     VITE_API_URL=http://localhost:8080
     ```
