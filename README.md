@@ -12,8 +12,9 @@ SpotTransfer lets you instantly migrate any Spotify playlist to YouTube Music—
 
 Prerequisites:
 
--   Python 3.8+
--   Node.js 14+ (or pnpm)
+-   Python 3.10+
+-   uv (https://github.com/astral-sh/uv)
+-   Node.js 14+ (with npm)
 -   Spotify Developer account (client ID & secret)
 
 Clone and install both backend and frontend:
@@ -29,9 +30,9 @@ cd SpotTransfer
     ```bash
     cd backend/
     ```
-2. Install the Python dependencies:
+2. Install the Python dependencies with `uv`:
     ```bash
-    pip install -r requirements.txt
+    uv sync
     ```
 3. Rename `.env.example` to `.env` and add your Spotify credentials (get these from the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/)):
     ```env
@@ -40,9 +41,8 @@ cd SpotTransfer
     ```
 4. Start the Flask server:
     ```bash
-    python3 main.py
+    uv run python main.py
     ```
-    Sometimes, using `python3` might not work depending on how python is configured on your system. Running `py main.py` usually works in such situations.
 
 ### Frontend Setup
 
